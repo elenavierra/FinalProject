@@ -99,6 +99,27 @@
     <body>
       <div class="container">
         <div class="column col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Section 1</a></li>
+          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Section 2</a></li>
+          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Section 3</a></li>
+          <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Section 4</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="home">North versus South</div>
+          <div role="tabpanel" class="tab-pane" id="profile">Resisting Incentives and Compromises</div>
+          <div role="tabpanel" class="tab-pane" id="messages">Troubled Learning</div>
+          <div role="tabpanel" class="tab-pane" id="settings">A substitute for learning</div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="container">
+        <div class="column col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h1>Who's my teacher today?</h1>
       <h3 class="description"> In St. Petersburg's worst schools, your teacher likely has less experience or a troubled past. Many simply quit.</h3>
       <p class="publicationdate"><a class="thirdseries" href=http://www.tampabay.com/projects/2015/investigations/pinellas-failure-factories/ target=_blank>Third in a series.</a> | Oct. 17, 2015</p>
@@ -446,6 +467,12 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+
+            $('#someTab').tab('show')
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+              e.target
+              e.relatedTarget 
+            })
         </script>
     </body>
 </html>
